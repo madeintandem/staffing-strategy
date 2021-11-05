@@ -32,6 +32,7 @@
     "moment": "^2.29.1",
     "nodemon": "^2.0.6",
     "postcss-cli": "^8.2.0",
+    "prettier": "^2.4.1",
     "react": "^17.0.1",
     "react-calendar-timeline": "^0.27.0",
     "react-datepicker": "^3.3.0",

@@ -43,6 +43,7 @@
     "react-select": "^3.1.0",
     "react-use-fetch-api": "^2.1.0",
     "reakit": "^1.2.5",
+    "supertest": "^6.1.6",
     "tabler-icons": "^1.35.0",
     "tailwindcss": "^1.9.6",
     "web-vitals": "^0.2.4"
@@ -54,7 +55,7 @@
     "build": "yarn run watch:css && react-scripts build",
     "test": "yarn test-server && yarn test-client",
     "test-client": "react-scripts test",
-    "test-server": "jest server/",
+    "test-server": "source .env.test && jest server/",
     "eject": "react-scripts eject",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },

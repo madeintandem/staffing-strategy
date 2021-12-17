@@ -177,18 +177,18 @@ describe("ScenarioParser", () => {
 
       const expected = [
         {
-          id: `Staffing Need 1-${ENGINEER_ROLE}-project-1`,
-          firstName: "Staffing Need",
+          id: `Staffing Need 2-${ENGINEER_ROLE}-project-1`,
           roles: [ENGINEER_ROLE],
+          firstName: "Staffing Need - Development",
           assignment: {
             startDate: new Date(2020, 3, 1),
             endDate: new Date(2020, 9, 1),
           },
         },
         {
-          id: `Staffing Need 2-${ENGINEER_ROLE}-project-1`,
+          id: `Staffing Need 1-${ENGINEER_ROLE}-project-1`,
+          firstName: "Staffing Need - Development",
           roles: [ENGINEER_ROLE],
-          firstName: "Staffing Need",
           assignment: {
             startDate: new Date(2020, 3, 1),
             endDate: new Date(2020, 9, 1),
@@ -197,7 +197,8 @@ describe("ScenarioParser", () => {
       ];
 
       expect(actual.length).toEqual(project2Assignments.length + project2.engineeringSeats);
-      expect(actual).toEqual(expect.arrayContaining(expected));
+      expect(actual[0]).toEqual(expected[0]);
+      expect(actual[1]).toEqual(expected[1]);
     });
   });
 });

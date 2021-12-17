@@ -58,7 +58,8 @@
     "test-client": "react-scripts test",
     "test-server": "source .env.test && jest server/",
     "eject": "react-scripts eject",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": [

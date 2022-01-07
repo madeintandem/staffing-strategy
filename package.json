@@ -56,7 +56,7 @@
     "build": "yarn run watch:css && react-scripts build",
     "test": "yarn test-server && yarn test-client",
     "test-client": "react-scripts test",
-    "test-server": "source .env.test && jest server/",
+    "test-server": "jest server/",
     "eject": "react-scripts eject",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "lint": "eslint ."
@@ -81,5 +81,8 @@
   },
   "prettier": {
     "printWidth": 120
+  },
+  "jest": {
+    "globalSetup": "./testSetup.js"
   }
 }

@@ -1,5 +1,4 @@
 const pipedrive = require("../pipedrive");
-const restClient = require("../restClient");
 
 jest.mock("../restClient", () => () => ({
   get: jest.fn().mockResolvedValue({

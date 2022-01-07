@@ -19,10 +19,12 @@ const pipedrive = () => {
       const stages = await get(
         `https://companydomain.pipedrive.com/api/v1/stages?api_token=${process.env.PIPE_DRIVE_API_TOKEN}`
       );
-      return stages.data.data.map((s) => ({
-        ...s,
-        id: s.id.toString(),
-      }));
+      return stages.data.data
+        .filter((stage) => !!stage.id)
+        .map((stage) => ({
+          ...stage,
+          id: stage.id.toString(),
+        }));
     },
   };
 };
